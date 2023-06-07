@@ -7,7 +7,7 @@ module.exports = {
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', "simple-import-sort"],
   root: true,
   rules: {
     'no-console': 1,
@@ -16,14 +16,14 @@ module.exports = {
     'import/order': [
       1,
       {
-        groups: ['external', 'builtin', 'internal', 'sibling', 'parent', 'index'],
+        groups: ['builtin', 'external', 'internal', 'sibling', 'parent', 'index'],
         pathGroups: [
           {
-            pattern: 'components',
+            pattern: 'common',
             group: 'internal',
           },
           {
-            pattern: 'common',
+            pattern: 'components',
             group: 'internal',
           },
           {

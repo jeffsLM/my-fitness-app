@@ -8,5 +8,5 @@
     "esModuleInterop": true,
     "strictNullChecks": true,
   },
-  "extends": "expo/tsconfig.base"
+  "extends": "expo-module-scripts/tsconfig.base"
 }
