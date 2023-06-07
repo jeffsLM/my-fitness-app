@@ -1,8 +1,8 @@
-import { createContext, ReactNode, useContext, useState } from "react";
-import { ThemeProvider } from 'styled-components';
 import { StatusBar } from 'expo-status-bar';
+import { createContext, ReactNode, useContext, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import { theme } from '../styles/theme'
+import { theme } from '../styles/theme';
 
 import { ThemeProps } from '../types/theme';
 
@@ -22,17 +22,14 @@ export const ThemeContextProvider = ({ children }: ThemeContextProviderProps) =>
 
   const changeTheme = (theme: ThemeProps) => {
     setApplicationTheme(theme);
-  }
+  };
 
   return (
     <ThemeContext.Provider value={{ theme: applicationTheme, changeTheme }}>
       <StatusBar style={applicationTheme} />
-      <ThemeProvider theme={theme[applicationTheme]}>
-        {children}
-      </ThemeProvider>
+      <ThemeProvider theme={theme[applicationTheme]}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
-}
-
+};
 
 export const useThemeChanger = () => useContext(ThemeContext);
