@@ -1,9 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 
-import { Background } from '../../components/Design/Background'
-
-// import { Container } from './styles';
+import { Background } from '../../components/Design/Background';
 
 export const Home: React.FC = () => {
   return (
@@ -11,5 +9,4 @@ export const Home: React.FC = () => {
       <Text>Home</Text>
     </Background>
   );
-}
-
+};
