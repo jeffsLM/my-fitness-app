@@ -42,5 +42,4 @@ const lightTheme = {
 
 export const googleFonts = { Sen_400Regular, Sen_700Bold, Sen_800ExtraBold };
 
-export type ThemeType = typeof lightTheme;
 export const theme = { light: lightTheme, dark: darkTheme };
